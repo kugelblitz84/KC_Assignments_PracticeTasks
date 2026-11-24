@@ -88,7 +88,7 @@ try:
 
     if ch == "3":
         print("Exiting the system.")
-    sys.exit(1)
+        sys.exit(1)
 
 except ValueError as er:
     print(f"Error: {er}")
