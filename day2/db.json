@@ -1,6 +1,7 @@
-[
-    {
-        "username": "sadi",
-        "password_hash": "$2b$06$Ua3i2I1Kj/iV/f33I5QZ7urhxjCeoLbJhMn3XNUoZ9BtpKlHqAu1K"
+{
+    "this": {
+        "username": "this",
+        "password_hash": "$2b$06$P7KwaWr9.BRdFH75aMdFSOg3dW9hRQHiEjTryrpMfZqOwzeg5JCMG",
+        "email": "mail"
     }
-]
+}
