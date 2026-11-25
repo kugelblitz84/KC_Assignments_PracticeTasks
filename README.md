@@ -29,3 +29,71 @@
 ### [Break an amount into notes](day1/breaking_money.py)
 
     Work from the largest note to the smallest. Use division to count each note and the remainder for the amount left.
+
+## Day 2
+
+### [Check the sign of a number](day2/check_number_sign.py)
+
+Classify an integer as positive, negative, or zero.
+
+### [Calculate subject grades](day2/Calculate_grades.py)
+
+Enter a mark from 0 to 100 for each subject to see its letter grade.
+
+### [Find the largest number](day2/find_the_largest_numebr.py)
+
+Use `max()` to find the largest of the space-separated integers.
+
+### [Print even numbers](day2/prnt_even_nums.py)
+
+Count from 2 to 100 in steps of two.
+
+### [Generate a multiplication table](day2/generate_multiplication_table.py)
+
+Print the products of the entered integer and the numbers 1 through 10.
+
+### [Sum the integers from 1 to N](day2/sum_of_1_to_N.py)
+
+Calculate the total with the formula `N * (N + 1) // 2`.
+
+### [Count digits](day2/count_digits.py)
+
+Count the digits in a positive integer by repeatedly dividing it by 10 and discarding the remainder.
+
+### [Use a menu-driven calculator](day2/calculator.py)
+
+Choose addition, subtraction, multiplication, or division, then enter two integers. The menu lets you repeat the calculation with new inputs.
+
+### [Register and log in](day2/password_verif_and_login.py)
+
+Create a user or verify a password against its stored hash in `day2/db.json`. Install the hashing library with `python -m pip install bcrypt` before running this exercise.
+
+## Day 3
+
+### [Sum a list of numbers](day3/calculate_sum.py)
+
+Enter space-separated integers and use `sum()` to total them.
+
+### [Find the smallest and largest numbers](day3/largest_smallest_number_in_list.py)
+
+Start with the first integer and update the minimum and maximum while scanning the list.
+
+### [Search for an item in a list](day3/search_item_in_list.py)
+
+Enter a list of integers and a number to search for. Print every zero-based index where the number appears.
+
+### [Remove duplicates](day3/remove_duplicates.py)
+
+Convert the entered integers to a set and print the distinct values.
+
+### [Convert text to lowercase](day3/user_inputs_to_lowercase.py)
+
+Apply `lower()` to the input and print the resulting string.
+
+### [Count words in a sentence](day3/count_words.py)
+
+Split the sentence on whitespace and print the total number of words.
+
+### [Count word frequencies](day3/count_frequency.py)
+
+Split the sentence on whitespace and count each word in a dictionary. The counts preserve capitalization and punctuation, so `Hi`, `hi`, and `hi!` each have their own entry.
