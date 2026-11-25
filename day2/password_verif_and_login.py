@@ -42,6 +42,7 @@ def set_password(name, password, mail = ""):
         has = hash_pass(password)
         file_path = Path(__file__).parent / "db.json"
         users[name] = asdict(User(username=name, password_hash=has.decode('utf-8'), email=mail))
+        users[name]["studentProfile"] = {}
         with file_path.open("w") as f:
             json.dump(users, f, indent=4)
         return response_dto(success=True, message="User created successfully.", data={})
@@ -67,30 +68,34 @@ def init_db():
     if not file_path.exists():
         with file_path.open("w") as f:
             json.dump({}, f, indent=4)
-    
-print("Welcome to the password verification system.\n Choose an option:\n 1. Create a new user\n 2. Login\n 3. Exit")
-try:
-    init_db()
-    ch = input("Enter your choice (1/2/3): ")
-    if ch == "1":
-        username = input("Enter a username: ")
-        password = input("Enter a password: ")
-        email = input("Enter an email (optional): ")
-        response = set_password(username, password, email)
-        print(response.message)
-        
-    if ch == "2":
-        username = input("Enter a username: ")
-        password = input("Enter a password: ")
-        response = verify_password(username, password)
-        print(response.message)
-        if response.success:
-            print(f"User's email: {response.data['email']}")
 
-    if ch == "3":
-        print("Exiting the system.")
-        sys.exit(1)
+def main():  
+    print("Welcome to the password verification system.\n Choose an option:\n 1. Create a new user\n 2. Login\n 3. Exit")
+    try:
+        init_db()
+        ch = input("Enter your choice (1/2/3): ")
+        if ch == "1":
+            username = input("Enter a username: ")
+            password = input("Enter a password: ")
+            email = input("Enter an email (optional): ")
+            response = set_password(username, password, email)
+            print(response.message)
+            
+        if ch == "2":
+            username = input("Enter a username: ")
+            password = input("Enter a password: ")
+            response = verify_password(username, password)
+            print(response.message)
+            if response.success:
+                print(f"User's email: {response.data['email']}")
 
-except ValueError as er:
-    print(f"Error: {er}")
-    sys.exit(0)
+        if ch == "3":
+            print("Exiting the system.")
+            sys.exit(1)
+
+    except ValueError as er:
+        print(f"Error: {er}")
+        sys.exit(0)
+
+if __name__ == "__main__":
+    main()

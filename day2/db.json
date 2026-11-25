@@ -1,7 +1,16 @@
 {
-    "this": {
-        "username": "this",
-        "password_hash": "$2b$06$P7KwaWr9.BRdFH75aMdFSOg3dW9hRQHiEjTryrpMfZqOwzeg5JCMG",
-        "email": "mail"
+    "sadi": {
+        "username": "sadi",
+        "password_hash": "$2b$06$kb5nt7dtbbPigxJ4.t36I.ZRX9j6S9bDlrMcevybdI/mPyNh46.JW",
+        "email": "thismail",
+        "studentProfile": {
+            "name": "sadi"
+        }
+    },
+    "secondacc": {
+        "username": "secondacc",
+        "password_hash": "$2b$06$i74Gd876aFT2bd0Txd65I.jqbS9pOHbEabjrLig7CK0LEdytxfhbm",
+        "email": "sawwdf",
+        "studentProfile": {}
     }
 }
