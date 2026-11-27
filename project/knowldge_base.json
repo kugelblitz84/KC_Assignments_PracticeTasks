@@ -1,0 +1,51 @@
+{    
+    
+    "code_explanations" : [
+        {
+            "question" : "What is the purpose of the 'bcrypt' library in the code?",
+            "answer" : "The 'bcrypt' library is used for hashing and verifying passwords securely."
+        },
+
+        {
+            "question" : "What is the purpose of the 'jwt' library in the code?",
+            "answer" : "The 'jwt' library is used for creating and verifying JSON Web Tokens (JWTs) for user authentication."
+        },
+
+        {
+            "question" : "What is the purpose of the 'dataclasses' module in the code?",
+            "answer" : "The 'dataclasses' module is used to create classes that are primarily used to store data, providing a convenient way to define data structures."
+        }
+
+    ],
+
+    "Features" : [
+        {
+            "question" : "What are the features of this application?",
+            "answer" : "The application provides user authentication features, including password verification and JWT token generation for secure access."
+        },
+
+        {
+            "question" : "Where is the JWT secret key stored?",
+            "answer" : "The JWT secret key is stored in an environment variable named 'JWT_SECRET'."
+        },
+
+        {
+            "question" : "Does this application support user registration?",
+            "answer" : "The provided code snippet does not include user registration functionality. It focuses on password verification and login."
+        }
+
+    ],
+
+    "Support" : [
+        {
+            "question" : "How do i contact support for this application?",
+            "answer" : "You can contact support by sending an email to sadimahmud225@gmail.com"
+
+        },
+        {
+            "question" : "Is there a support forum for this application?",
+            "answer" : "Currently, there is no support forum available for this application."
+        }
+    ]
+
+}

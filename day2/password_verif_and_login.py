@@ -4,14 +4,18 @@ from pathlib import Path
 import json
 from dataclasses import dataclass, field, asdict
 from typing import Any
+import jwt
+from datetime import datetime, timedelta, timezone
+import os
 
+jwt_secret = os.environ["JWT_SECRET"]
 
 @dataclass
 class User:
     username: str
     password_hash: str
     email: str = ""
-
+    token: str = ""
 @dataclass
 class response_dto:
     success: bool
@@ -56,7 +60,13 @@ def verify_password(name, password):
         if name in users:
             user = users[name]
             if bcrypt.checkpw(password.encode('utf-8'), user["password_hash"].encode('utf-8')):
-                return response_dto(success=True, message="Password verified successfully.", data={"email": user["email"]})
+                jwt_payload = {
+                    "subb": user["username"],
+                    "iat": datetime.now(tz=timezone.utc),
+                    "exp": datetime.now(timezone.utc) + timedelta(hours=2)
+                }
+                user["token"] = jwt.encode(jwt_payload, jwt_secret, algorithm="HS256")
+                return response_dto(success=True, message="Password verified successfully.", data={"email": user["email"], "token": user["token"]})
             else:
                 return response_dto(success=False, message="Incorrect password.", data={})
         return response_dto(success=False, message="User not found.", data={})
