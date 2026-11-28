@@ -2,16 +2,19 @@
     
     "code_explanations" : [
         {
+            "id" : 1,
             "question" : "What is the purpose of the 'bcrypt' library in the code?",
             "answer" : "The 'bcrypt' library is used for hashing and verifying passwords securely."
         },
 
         {
+            "id" : 2,
             "question" : "What is the purpose of the 'jwt' library in the code?",
             "answer" : "The 'jwt' library is used for creating and verifying JSON Web Tokens (JWTs) for user authentication."
         },
 
         {
+            "id" : 3,
             "question" : "What is the purpose of the 'dataclasses' module in the code?",
             "answer" : "The 'dataclasses' module is used to create classes that are primarily used to store data, providing a convenient way to define data structures."
         }
@@ -20,16 +23,19 @@
 
     "Features" : [
         {
+            "id" : 4,
             "question" : "What are the features of this application?",
             "answer" : "The application provides user authentication features, including password verification and JWT token generation for secure access."
         },
 
         {
+            "id" : 5,
             "question" : "Where is the JWT secret key stored?",
             "answer" : "The JWT secret key is stored in an environment variable named 'JWT_SECRET'."
         },
 
         {
+            "id" : 6,
             "question" : "Does this application support user registration?",
             "answer" : "The provided code snippet does not include user registration functionality. It focuses on password verification and login."
         }
@@ -38,11 +44,13 @@
 
     "Support" : [
         {
+            "id" : 7,
             "question" : "How do i contact support for this application?",
             "answer" : "You can contact support by sending an email to sadimahmud225@gmail.com"
 
         },
         {
+            "id" : 8,
             "question" : "Is there a support forum for this application?",
             "answer" : "Currently, there is no support forum available for this application."
         }

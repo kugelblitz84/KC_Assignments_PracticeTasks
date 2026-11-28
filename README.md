@@ -228,3 +228,45 @@ Create an account or log in, then view or update your name, age, class, and roll
 ```sh
 python -m day3.update_student_profile
 ```
+
+## Project: Smart Knowledge System
+
+The Smart Knowledge System is a terminal app for maintaining and searching a categorized FAQ. You can add, browse, edit, and delete entries. When you search, the app compares your keywords with stored questions and answers and displays the best match. The history screen lists recorded actions, and the statistics screen shows the number of knowledge items, total recorded actions, actions per user, and keyword frequencies.
+
+### Run the project
+
+From the repository root, activate the virtual environment described above and install the project dependencies.
+
+```sh
+python -m pip install bcrypt PyJWT
+```
+
+Set `JWT_SECRET` in the terminal you will use to run the app. Login uses this key to sign a session token that expires after two hours.
+
+**Windows (PowerShell)**
+
+```powershell
+$env:JWT_SECRET = python -c "import secrets; print(secrets.token_hex(32))"
+```
+
+**macOS or Linux**
+
+```sh
+export JWT_SECRET="$(python -c 'import secrets; print(secrets.token_hex(32))')"
+```
+
+Start the app from the directory containing the `project` folder.
+
+```sh
+python -m project.main
+```
+
+On your first run, choose **2. Sign up**, create an account, then choose **1. Log in**. To try the included FAQ, select **2. Search Knowledge** and enter `Where is the JWT secret key stored?`.
+
+### Project data
+
+| File | Contents |
+| --- | --- |
+| `project/db.json` | User accounts and bcrypt password hashes |
+| `project/knowldge_base.json` | FAQ entries grouped by category, each with an ID, question, and answer |
+| `project/history.json` | Timestamped actions with usernames and search keywords, used by the history and statistics screens |

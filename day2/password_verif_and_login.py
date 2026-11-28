@@ -61,7 +61,7 @@ def verify_password(name, password):
             user = users[name]
             if bcrypt.checkpw(password.encode('utf-8'), user["password_hash"].encode('utf-8')):
                 jwt_payload = {
-                    "subb": user["username"],
+                    "sub": user["username"],
                     "iat": datetime.now(tz=timezone.utc),
                     "exp": datetime.now(timezone.utc) + timedelta(hours=2)
                 }
